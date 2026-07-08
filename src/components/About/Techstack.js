@@ -14,18 +14,14 @@ import ReactIcon from "../../Assets/TechIcons/React.svg";
 import Typescript from "../../Assets/TechIcons/Typescript.svg";
 import Git from "../../Assets/TechIcons/Git.svg";
 import Firebase from "../../Assets/TechIcons/Firebase.svg";
-// import Redis from "../../Assets/TechIcons/Redis.svg";
-// import Docker from "../../Assets/TechIcons/Docker.svg";
 import Mongo from "../../Assets/TechIcons/Mongo.svg";
-// import SQL from "../../Assets/TechIcons/SQL.svg";
-// import Kubernates from "../../Assets/TechIcons/Kubernates.svg";
-// import Redux from "../../Assets/TechIcons/Redux.svg";
+
 import Tailwind from "../../Assets/TechIcons/Tailwind.svg";
 import MUI from "../../Assets/TechIcons/MUI.svg";
 import Claude from "../../Assets/TechIcons/claude.jpeg";
-// import Postman from "../../Assets/TechIcons/Postman.svg";
+
 import AWS from "../../Assets/TechIcons/AWS.svg";
-// import Kafka from "../../Assets/TechIcons/Kafka.svg";
+
 
 function Techstack() {
   return (
@@ -61,10 +57,7 @@ function Techstack() {
         <div className="tech-icons-text">Mongo DB</div>
       </Col>
      
-      {/* <Col xs={4} md={2} className="tech-icons">
-        <SiNextdotjs fontSize={"24px"} />
-        <div className="tech-icons-text">Next.js</div>
-      </Col> */}
+    
       <Col xs={4} md={2} className="tech-icons">
         <img src={Git} alt="git" />
         <div className="tech-icons-text">Git</div>
@@ -88,25 +81,14 @@ function Techstack() {
         <div className="tech-icons-text">Claude Ai</div>
       </Col>
 
-      {/* <Col xs={4} md={2} className="tech-icons">
-        <img src={Postman} alt="Postman" />
-        <div className="tech-icons-text">Postman</div>
-      </Col> */}
-
-      {/* <Col xs={4} md={2} className="tech-icons">
-        <FaRust fontSize={"24px"} />
-        <div className="tech-icons-text">Rust</div>
-      </Col> */}
+   
 
       <Col xs={4} md={2} className="tech-icons">
         <img src={AWS} alt="Postman" className="tech-icon-images" />
         <div className="tech-icons-text">AWS</div>
       </Col>
 
-      {/* <Col xs={4} md={2} className="tech-icons">
-        <img src={Kafka} alt="Kafka" className="tech-icon-images" />
-        <div className="tech-icons-text">Kafka</div>
-      </Col> */}
+    
     </Row>
   );
 }
