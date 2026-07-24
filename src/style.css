@@ -510,13 +510,13 @@ button:focus {
 }
 
 .card-img-top {
-padding: 10px !important;
-    opacity: 0.6 !important;
-    border-radius: 15px !important;
-    height: 160px!important;
+  padding: 10px !important;
+  opacity: 0.6 !important;
+  border-radius: 15px !important;
+  height: 160px !important;
 }
 .project-card-view:hover .card-img-top {
-  opacity: 0.9!important;
+  opacity: 0.9 !important;
   transition: opacity 0.3s ease;
 }
 
@@ -577,9 +577,12 @@ padding: 10px !important;
   transition: all 0.4s ease 0s !important;
   width: fit-content !important;
   cursor: pointer !important;
-  transition: outline-color 0.3s, outline-width 0.3s, transform 0.3s;
+  transition:
+    outline-color 0.3s,
+    outline-width 0.3s,
+    transform 0.3s;
   color: white;
-  img{
+  img {
     width: 25px;
     height: auto;
   }
@@ -769,8 +772,92 @@ padding: 10px !important;
   display: none !important;
 }
 
-
 .card-title {
-  font-weight: bold!important;
-      color: #aa98bc !important;
+  font-weight: bold !important;
+  color: #aa98bc !important;
+}
+
+.skill-subtitle {
+  text-align: center;
+  color: #b8b8b8;
+  font-size: 18px;
+  margin-bottom: 45px;
+  letter-spacing: 0.5px;
+}
+
+.skill-category {
+  background: rgba(255, 255, 255, 0.03);
+
+  border: 1px solid rgba(124, 95, 255, 0.3);
+
+  border-radius: 20px;
+
+  padding: 30px;
+
+  margin-bottom: 35px;
+
+  backdrop-filter: blur(8px);
+
+  box-shadow: 0 0 25px rgba(125, 95, 255, 0.12);
+}
+
+.skill-category h4 {
+  color: #fff;
+
+  font-weight: 700;
+
+  margin-bottom: 25px;
+
+  font-size: 22px;
+}
+
+.skill-box {
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  height: 72px;
+
+  padding: 16px;
+
+  margin-bottom: 20px;
+
+  border-radius: 14px;
+
+  background: #10172d;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  transition: 0.3s;
+}
+
+.skill-box:hover {
+  transform: translateY(-6px);
+
+  border-color: #8b5cf6;
+
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.35);
+}
+
+.skill-box img {
+  width: 29px;
+
+  height: 29px;
+
+  object-fit: contain;
+}
+
+.skill-box span {
+  color: #fff;
+
+  font-size: 14px;
+
+  font-weight: 500;
+}
+
+.myAvtar img {
+    border-radius: 50%;
+    border: 7px solid #ac75d3;
 }

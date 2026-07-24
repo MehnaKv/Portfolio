@@ -11,13 +11,13 @@ function AboutCard() {
             Hi everyone! I’m <span className="purple">Mehna Yashi</span> from{" "}
             <span className="purple">Kerala, India</span>.
             <br />
-          Currently based in Dubai and actively seeking Frontend Developer and other IT opportunities. <br />
+          Currently based in Dubai and Open to Frontend Developer and Software Development opportunities in the UAE and remotely. <br />
             I hold a B.Tech in{" "}
             <span className="purple">
               Computer Science and Engineering
             </span> from <span className="purple">Mea Engineering College </span>          
             
-            and have 4+ years of experience building modern, responsive web applications.
+            and have 5+ years of experience building modern, responsive web applications.
             <br />
             <br />
             Outside of coding, I love engaging in activities that keep me

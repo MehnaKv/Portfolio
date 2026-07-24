@@ -1,33 +1,80 @@
 import React from "react";
-import { Col, Row } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
+
 import macOs from "../../Assets/TechIcons/Apple MacOSX.svg";
 import chrome from "../../Assets/TechIcons/Google Chrome.svg";
 import vsCode from "../../Assets/TechIcons/vscode.svg";
-// import intelliJ from "../../Assets/TechIcons/intellij-idea.svg";
+
+// Optional
+// import Windows from "../../Assets/TechIcons/windows.svg";
+// import Postman from "../../Assets/TechIcons/postman.svg";
+// import Github from "../../Assets/TechIcons/github.svg";
+
+const tools = [
+  {
+    img: vsCode,
+    name: "VS Code",
+  },
+  {
+    img: chrome,
+    name: "Google Chrome",
+  },
+  {
+    img: macOs,
+    name: "MacOS",
+  },
+
+  // Uncomment if available
+
+  // {
+  //   img: Github,
+  //   name: "GitHub",
+  // },
+
+  // {
+  //   img: Postman,
+  //   name: "Postman",
+  // },
+
+  // {
+  //   img: Windows,
+  //   name: "Windows",
+  // },
+];
 
 function Toolstack() {
   return (
-    <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
-      
-      <Col xs={4} md={2} className="tech-icons">
-        <img src={macOs} alt="macOs" className="tech-icon-images" />
-        <div className="tech-icons-text">Mac Os</div>
-      </Col>
-        <Col xs={4} md={2} className="tech-icons ">
-        <img src={vsCode} alt="vsCode" className="tech-icon-images" />
-        <div className="tech-icons-text">Vs Code</div>
-      </Col>
-      <Col xs={4} md={2} className="tech-icons ">
-        <img src={chrome} alt="Chrome" className="tech-icon-images" />
-        <div className="tech-icons-text">Google Chrome</div>
-      </Col>
-    
+    <Container>
 
-      {/* <Col xs={4} md={2} className="tech-icons ">
-        <img src={intelliJ} alt="go" className="tech-icon-images" />
-        <div className="tech-icons-text">IntelliJ</div>
-      </Col> */}
-    </Row>
+      <div className="skill-category">
+
+        <h4>Tools & Utilities</h4>
+
+        <Row>
+
+          {tools.map((tool, index) => (
+            <Col lg={4} md={6} sm={6} xs={12} key={index}>
+
+              <div className="skill-box">
+
+                <img
+                  src={tool.img}
+                  alt={tool.name}
+                  className="tech-icon-images"
+                />
+
+                <span>{tool.name}</span>
+
+              </div>
+
+            </Col>
+          ))}
+
+        </Row>
+
+      </div>
+
+    </Container>
   );
 }
 
