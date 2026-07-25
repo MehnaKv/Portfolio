@@ -15,7 +15,9 @@ html {
 }
 
 .purple {
-  color: var(--imp-text-color) !important;
+  background: linear-gradient(90deg, #8b5cf6, #860381);
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 button:focus {
@@ -776,6 +778,9 @@ button:focus {
   font-weight: bold !important;
   color: #aa98bc !important;
 }
+/* ==========================================================
+   SKILLS SECTION
+========================================================== */
 
 .skill-subtitle {
   text-align: center;
@@ -787,77 +792,521 @@ button:focus {
 
 .skill-category {
   background: rgba(255, 255, 255, 0.03);
-
-  border: 1px solid rgba(124, 95, 255, 0.3);
-
+  border: 1px solid rgba(124, 95, 255, 0.25);
   border-radius: 20px;
-
   padding: 30px;
-
   margin-bottom: 35px;
-
-  backdrop-filter: blur(8px);
-
+  backdrop-filter: blur(10px);
   box-shadow: 0 0 25px rgba(125, 95, 255, 0.12);
 }
 
 .skill-category h4 {
   color: #fff;
-
-  font-weight: 700;
-
-  margin-bottom: 25px;
-
   font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 25px;
 }
 
+/* ==========================================================
+   SKILL BOX
+========================================================== */
+
 .skill-box {
+  position: relative;
+
   display: flex;
-
   align-items: center;
+  gap: 12px;
 
-  gap: 14px;
+  width: 100%;
+  min-height: 72px;
 
-  height: 72px;
-
-  padding: 16px;
-
-  margin-bottom: 20px;
-
-  border-radius: 14px;
+  padding: 14px 16px;
+  margin-bottom: 18px;
 
   background: #10172d;
 
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid transparent;
+  border-radius: 14px;
 
-  transition: 0.3s;
+  overflow: hidden;
+
+  transition: all 0.35s ease;
+
+  z-index: 1;
 }
+
+/* Animated Gradient Border */
+
+.skill-box::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 1.5px;
+  border-radius: inherit;
+
+  background: linear-gradient(135deg, #8b5cf6, #6366f1, #06b6d4, #8b5cf6);
+
+  background-size: 250% 250%;
+
+  animation: borderMove 5s linear infinite;
+
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+
+  opacity: 0;
+
+  transition: opacity 0.35s ease;
+}
+
+.skill-box:hover::before {
+  opacity: 1;
+}
+
+@keyframes borderMove {
+  0% {
+    background-position: 0%;
+  }
+
+  100% {
+    background-position: 200%;
+  }
+}
+
+/* Hover */
 
 .skill-box:hover {
   transform: translateY(-6px);
 
-  border-color: #8b5cf6;
-
-  box-shadow: 0 0 20px rgba(139, 92, 246, 0.35);
+  box-shadow:
+    0 8px 25px rgba(99, 102, 241, 0.22),
+    0 0 25px rgba(139, 92, 246, 0.2);
 }
+
+/* ==========================================================
+   ICON
+========================================================== */
 
 .skill-box img {
-  width: 29px;
-
-  height: 29px;
-
+  width: 28px;
+  height: 28px;
   object-fit: contain;
+
+  flex-shrink: 0;
+
+  transition: transform 0.35s ease;
 }
 
+.skill-box:hover img {
+  transform: scale(1.15) rotate(6deg);
+}
+
+/* ==========================================================
+   TEXT
+========================================================== */
+
 .skill-box span {
-  color: #fff;
+  flex: 1;
+  min-width: 0;
 
-  font-size: 14px;
+  color: #e5e7eb;
 
+  font-size: 15px;
   font-weight: 500;
+  line-height: 1.35;
+
+  word-break: break-word;
+  overflow-wrap: anywhere;
+
+  transition: color 0.35s ease;
+}
+
+.skill-box:hover span {
+  color: #fff;
+}
+
+/* ==========================================================
+   XXL
+========================================================== */
+
+@media (max-width: 1400px) {
+  .skill-category {
+    padding: 28px;
+  }
+
+  .skill-box {
+    padding: 13px;
+    gap: 10px;
+  }
+
+  .skill-box img {
+    width: 26px;
+    height: 26px;
+  }
+
+  .skill-box span {
+    font-size: 14px;
+  }
+}
+
+/* ==========================================================
+   XL
+========================================================== */
+
+@media (max-width: 1200px) {
+  .skill-category {
+    padding: 25px;
+  }
+
+  .skill-box {
+    min-height: 68px;
+  }
+
+  .skill-box span {
+    font-size: 13.5px;
+  }
+}
+
+/* ==========================================================
+   LG
+========================================================== */
+
+@media (max-width: 992px) {
+  .skill-category {
+    padding: 22px;
+  }
+
+  .skill-category h4 {
+    font-size: 20px;
+  }
+
+  .skill-box {
+    padding: 12px;
+    min-height: 64px;
+    gap: 10px;
+  }
+
+  .skill-box img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .skill-box span {
+    font-size: 13px;
+  }
+}
+
+/* ==========================================================
+   MD
+========================================================== */
+
+@media (max-width: 768px) {
+  .skill-category {
+    padding: 20px;
+  }
+
+  .skill-category h4 {
+    text-align: center;
+    font-size: 19px;
+  }
+
+  .skill-box {
+    padding: 11px;
+    min-height: 60px;
+    gap: 10px;
+  }
+
+  .skill-box img {
+    width: 22px;
+    height: 22px;
+  }
+
+  .skill-box span {
+    font-size: 13px;
+  }
+}
+
+/* ==========================================================
+   SM
+========================================================== */
+
+@media (max-width: 576px) {
+  .skill-category {
+    padding: 18px;
+    border-radius: 18px;
+  }
+
+  .skill-category h4 {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  .skill-box {
+    padding: 10px;
+    min-height: 56px;
+    gap: 8px;
+    margin-bottom: 14px;
+  }
+
+  .skill-box img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .skill-box span {
+    font-size: 12px;
+  }
 }
 
 .myAvtar img {
-    border-radius: 50%;
-    border: 7px solid #ac75d3;
+  border-radius: 50%;
+  border: 7px solid transparent;
+  background:
+    linear-gradient(#10172d, #10172d) padding-box,
+    linear-gradient(90deg, #8b5cf6, #860381) border-box;
 }
+
+.contact-section {
+  padding: 120px 0;
+  position: relative;
+  color: white;
+}
+
+.contact-heading {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.available {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+
+  padding: 8px 18px;
+  border-radius: 50px;
+
+  font-size: 14px;
+  color: #34d399;
+
+  margin-bottom: 25px;
+}
+
+.available span {
+  width: 10px;
+  height: 10px;
+
+  background: #22c55e;
+
+  border-radius: 50%;
+
+  box-shadow: 0 0 15px #22c55e;
+}
+
+.contact-heading h1 {
+  font-size: 2.3em !important;
+  font-weight: 500 !important;
+  padding-top: 10px !important;
+}
+
+.contact-heading p {
+  max-width: 700px;
+  margin: auto;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #ffffff;
+}
+
+.contact-wrapper {
+  margin-top: 40px;
+}
+
+.modern-contact-card,
+.modern-resume-card {
+  height: 100%;
+
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.08),
+    rgba(255, 255, 255, 0.02)
+  );
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  border-radius: 30px;
+
+  padding: 40px;
+
+  backdrop-filter: blur(20px);
+
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
+}
+
+.modern-contact-card h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.card-desc {
+  color: #aab1c4;
+  margin-bottom: 30px;
+}
+
+.modern-contact-item {
+  display: flex;
+
+  align-items: center;
+
+  gap: 20px;
+
+  padding: 18px;
+
+  margin-bottom: 18px;
+
+  border-radius: 20px;
+
+  background: #11182e;
+
+  transition: 0.4s;
+}
+
+.modern-contact-item:hover {
+  transform: translateX(10px);
+
+  background: linear-gradient(135deg, #171f3d, #11182e);
+
+  box-shadow: 0 15px 35px rgba(139, 92, 246, 0.25);
+}
+
+.icon-box {
+  width: 43px;
+  height: 43px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #baa0f6, #492d6a);
+}
+
+.modern-contact-item h5 {
+  margin: 0 0 5px;
+  text-align: left;
+}
+
+.modern-contact-item a,
+.modern-contact-item span {
+  color: #cbd5e1;
+
+  text-decoration: none;
+
+  font-size: 15px;
+}
+
+.modern-contact-item a:hover {
+  color: #8b5cf6;
+}
+
+.modern-resume-card {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+}
+
+.resume-circle {
+  width: 104px;
+  height: 104px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 39px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #a68cde, #492d69);
+
+  box-shadow: 0 0 60px rgba(139, 92, 246, 0.5);
+
+  margin-bottom: 30px;
+}
+
+.modern-resume-card h2 {
+  font-size: 32px;
+}
+
+.modern-resume-card p {
+  color: #b8c0d4;
+
+  line-height: 1.8;
+
+  max-width: 350px;
+}
+
+.download-btn {
+  margin-top: 25px;
+
+  padding: 16px 35px;
+
+  border-radius: 50px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  background: linear-gradient(135deg, #a68cde, #492d69);
+
+  color: white;
+
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition: 0.4s;
+}
+
+.download-btn:hover {
+  transform: translateY(-5px);
+
+  box-shadow: 0 20px 40px rgba(139, 92, 246, 0.4);
+
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .contact-heading h1 {
+    font-size: 36px;
+  }
+
+  .modern-contact-card,
+  .modern-resume-card {
+    padding: 25px;
+  }
+
+.modern-resume-card{
+  margin-top:10px;
+}
+
+
+
+}
+
+@media (max-width: 990px) {
+  .modern-resume-card{
+  margin-top:20px;
+}
+}
+
+
+
