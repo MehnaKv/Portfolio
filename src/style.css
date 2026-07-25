@@ -1174,6 +1174,7 @@ button:focus {
   background: #11182e;
 
   transition: 0.4s;
+ 
 }
 
 .modern-contact-item:hover {
@@ -1207,6 +1208,7 @@ button:focus {
   text-decoration: none;
 
   font-size: 15px;
+  text-align:left;
 }
 
 .modern-contact-item a:hover {
