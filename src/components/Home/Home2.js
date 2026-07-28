@@ -29,7 +29,7 @@ function Home2() {
               — and I enjoy working across both backend and frontend stacks.
               <br />
               <br />
-              My key areas of interest include developing
+               key areas of interest include developing
               <i>
                 <b className="purple">
                   {" "}

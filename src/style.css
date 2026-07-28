@@ -165,7 +165,9 @@ button:focus {
   height: 1.4em !important;
   width: 2.5em !important;
 }
-
+.logoHeader{
+  font-size:22px;
+}
 .navbar-nav .nav-link {
   color: white !important;
   padding-right: 1rem !important;
@@ -1161,7 +1163,7 @@ button:focus {
 .modern-contact-item {
   display: flex;
 
-  align-items: center;
+  text-align: left;
 
   gap: 20px;
 
@@ -1174,7 +1176,6 @@ button:focus {
   background: #11182e;
 
   transition: 0.4s;
- 
 }
 
 .modern-contact-item:hover {
@@ -1208,7 +1209,7 @@ button:focus {
   text-decoration: none;
 
   font-size: 15px;
-  text-align:left;
+  text-align: left;
 }
 
 .modern-contact-item a:hover {
@@ -1296,19 +1297,13 @@ button:focus {
     padding: 25px;
   }
 
-.modern-resume-card{
-  margin-top:10px;
-}
-
-
-
+  .modern-resume-card {
+    margin-top: 10px;
+  }
 }
 
 @media (max-width: 990px) {
-  .modern-resume-card{
-  margin-top:20px;
+  .modern-resume-card {
+    margin-top: 20px;
+  }
 }
-}
-
-
-

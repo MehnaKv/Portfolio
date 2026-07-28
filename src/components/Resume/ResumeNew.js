@@ -107,7 +107,7 @@ function ResumeNew() {
                 <FaFileDownload />
               </div>
 
-              <h2>Download My Resume</h2>
+              <h2>Download My Cv</h2>
 
               <p>
                 Explore my professional experience, technical skills, projects
@@ -120,7 +120,7 @@ function ResumeNew() {
                 rel="noopener noreferrer"
                 className="download-btn"
               >
-                Download Resume
+                Download Cv
                 <FaArrowRight />
               </a>
             </div>
