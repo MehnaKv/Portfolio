@@ -8,6 +8,7 @@ import Typescript from "../../Assets/TechIcons/Typescript.svg";
 import ReactIcon from "../../Assets/TechIcons/React.svg";
 import Tailwind from "../../Assets/TechIcons/Tailwind.svg";
 import Bootstrap from "../../Assets/TechIcons/Bootstrap.png";
+import WordPress from "../../Assets/TechIcons/WordPress.png";
 import MUI from "../../Assets/TechIcons/MUI.svg";
 
 import Node from "../../Assets/TechIcons/Node.svg";
@@ -29,6 +30,7 @@ const frontend = [
   { img: Javascript, name: "JavaScript" },
   { img: Typescript, name: "TypeScript" },
   { img: ReactIcon, name: "React.js" },
+    { img: WordPress, name: "WordPress" },
   { img: Tailwind, name: "Tailwind CSS" },
   { img: Bootstrap, name: "Bootstrap" },
   { img: MUI, name: "Material UI" },
