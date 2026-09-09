@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Particle from "../Particle";
-import pdf from "../../Assets/mehnakv.pdf";
+// import pdf from "../../Assets/mehnakv.pdf";
 
 import {
   FaEnvelope,
@@ -9,8 +9,8 @@ import {
   FaMapMarkerAlt,
   FaLinkedin,
   FaGithub,
-  FaFileDownload,
-  FaArrowRight,
+  // FaFileDownload,
+  // FaArrowRight,
 } from "react-icons/fa";
 
 function ResumeNew() {
@@ -24,8 +24,8 @@ function ResumeNew() {
     {
       icon: <FaPhoneAlt />,
       title: "Phone",
-      value: "+971 55 574 6231",
-      link: "tel:+971555746231",
+      value: "+971 55 574 6821",
+      link: "tel:+971555746821",
     },
     {
       icon: <FaMapMarkerAlt />,
@@ -70,7 +70,7 @@ function ResumeNew() {
         <Row className="contact-wrapper align-items-stretch">
           {/* LEFT */}
 
-          <Col lg={7}>
+          <Col lg={12}>
             <div className="modern-contact-card">
               <h2>Contact Information</h2>
 
@@ -101,7 +101,7 @@ function ResumeNew() {
 
           {/* RIGHT */}
 
-          <Col lg={5}>
+          {/* <Col lg={5}>
             <div className="modern-resume-card">
               <div className="resume-circle">
                 <FaFileDownload />
@@ -124,7 +124,7 @@ function ResumeNew() {
                 <FaArrowRight />
               </a>
             </div>
-          </Col>
+          </Col> */}
         </Row>
       </Container>
     </Container>
